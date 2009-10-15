@@ -9,7 +9,7 @@ MEDIA_ROOT = join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = join(MEDIA_ROOT, 'static')
 STATIC_URL = '/media/static/'
-ADMIN_MEDIA_PREFIX = '/admin_media/'
+ADMIN_MEDIA_PREFIX = '/site_media/'
 
 SITE_ID=1
 ROOT_URLCONF = 'mingus.urls'

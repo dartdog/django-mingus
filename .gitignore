@@ -1,3 +1,5 @@
+CACHE
+build
 *.pyc
 *.bak
 *.db
