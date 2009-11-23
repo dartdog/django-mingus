@@ -13,13 +13,13 @@ ADMIN_MEDIA_PREFIX = '/site_media/'
 
 SITE_ID=1
 ROOT_URLCONF = 'mingus.urls'
-TIME_ZONE = 'America/New_York'
+TIME_ZONE = 'America/Chicago'
 SECRET_KEY = '+bq@o(jph^-*sfj4j%xukecxb0jae9lci&ysy=609hj@(l$47c'
 USE_I18N = False
 HONEYPOT_FIELD_NAME = 'fonzie_kungfu'
 
 MANAGERS = (
-    ('fooper','your@emailaddress'),
+    ('Tombrander','tombrander@tombrander.com'),
 )
 
 TEMPLATE_DIRS = (

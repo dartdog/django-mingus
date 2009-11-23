@@ -62,9 +62,9 @@ body {
 }
 
 .post .teaser{ 
-    border-bottom: solid 1.0em #333940; 
-    padding: .1em .1em .8em .1em; 
-    margin-bottom: .9em;
+    border-bottom: solid .5em #333940; 
+    padding: .1em .1em .4em .1em; 
+    margin-bottom: .7em;
 }
 
 #right-rail p {
