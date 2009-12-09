@@ -30,6 +30,7 @@ sitemaps = {
 handler500 = "mingus.core.views.server_error"
 
 urlpatterns = patterns('',
+    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/images/favicon.ico'}),
     url(r'^admin/password_reset/$', 'django.contrib.auth.views.password_reset', name='password_reset'),
     (r'^password_reset/done/$', 'django.contrib.auth.views.password_reset_done'),
     (r'^reset/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 'django.contrib.auth.views.password_reset_confirm'),

@@ -1,3 +1,6 @@
+mingus.wsgi
+CACHE
+build
 *.pyc
 *.bak
 *.db

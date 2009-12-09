@@ -1,8 +1,10 @@
-
 body {
     color: #333940;
     background: #f4f4f4;
+    background-image: url(topgradient.png);
+    background-repeat: repeat-x;
 }
+
 
 /* LAYOUT */
 .post .date, .quote .date, .bookmark .date {
@@ -12,7 +14,7 @@ body {
 	margin: 0.3em 0  0 -6.0em;
 	width: 3.8em;
 }
-.post .teaser{ border-bottom: solid 1.0em #333940;}
+.post .teaser{ border-bottom: solid .2em #333940;}
 
 /* TYPE */
 h4{ color: #333940;}

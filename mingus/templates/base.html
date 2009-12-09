@@ -5,17 +5,18 @@
 
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="favicon.ico" >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>{% block title %}{{ BLOG_SETTINGS.site_name }}{% endblock %}</title>
 
     {% block meta %}
     <meta name="keywords" content="{{ BLOG_SETTINGS.meta_keywords }}">
     <meta name="description" content="{{ BLOG_SETTINGS.meta_description }}">
-    <meta name="author" content="{{ BLOG_SETTINGS.author_name }}" />
+    <meta name="author" content="{{ BLOG_SETTINGS.author_name }}">
     {% endblock %}
-
-     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
-     <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon"/>
+    <meta name="google-site-verification" content="5nTk3GIo5lDLzKJyRbT8NKDNsw3F5WZNgOnD6a02xCE">
+     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}">
+     <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon">
 
   {% block rss %}
   <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
@@ -42,7 +43,7 @@
     {% block extra_head %}{% endblock %}
   </head>
 
-<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}blog{% endblock %}">
+<body id="{% block body_id %}blog{% endblock %}" class="{% block body_class %}blog{% endblock %}">
 <div id="bleeder"></div>
 
   <div id="body-container" class="clearfix">
@@ -50,7 +51,7 @@
 
   <div id="header" class="clearfix">
     <div id="logo">
-      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
+      <h1><img class="logo" src="{{ STATIC_URL }}imgs/oswco4logo.png" alt="Open SoftWare Company"><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
       <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
     </div>
     <!-- /logo -->
@@ -78,14 +79,14 @@
 
     <div id="right-rail" class="grid_6">
 
-      <h4>{% trans "About" %}</h4>
-      <p>{{ BLOG_SETTINGS.about }}</p>
+      <h4>{% trans "About OSWCO" %}</h4>
+      <p>{{ BLOG_SETTINGS.about|safe }}</p>
 
-      <h4>Subscribe</h4>
+      <h4>Subscribe to us:</h4>
       <ul>
-	    <li><a href="{{ BLOG_SETTINGS.twitter_url }}"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-b.png" alt="Follow dartdog on Twitter" >Twitter</a></li>
-        <li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>
-        <li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}"><img src="{{ STATIC_URL }}imgs/mailico.gif" alt="Subscribe via Email">Email</a></li>
+        <li><a href="{{ BLOG_SETTINGS.twitter_url }}"title = "Follow us on Twitter"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-b.png" >Twitter</a></li>
+        <li><a href="{{ BLOG_SETTINGS.rss_url }}" title = "Subscribe via RSS"><img src="http://faq.files.wordpress.com/2006/11/a14.png" alt="RSS"> RSS</a></li>
+        <li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title = "Subscribe via Email"><img src="{{ STATIC_URL }}imgs/mailico.gif" >Email</a></li>      
       </ul>
 
       <h4>{% trans "Elsewhere" %}</h4>
@@ -129,7 +130,7 @@
     {% endcache %}
 
       {% cache 3600 "base.blogroll" %}
-      {% get_blogroll 10 as blogroll %}
+      {% get_blogroll as blogroll %}
       <h4>{% trans "BlogRoll" %}</h4>
       <ul class="recent-posts">
       {% for item in blogroll %}
