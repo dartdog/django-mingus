@@ -165,7 +165,10 @@ pre.prettyprint {
   margin-left: 80px;
   width: 960px;
   margin-bottom: 30px;
-    padding-bottom: 1.0em;
+  padding-bottom: 0em;
+}
+#head1 {
+  display: block;
 }
 
 #logo { float: left; }
@@ -176,12 +179,6 @@ pre.prettyprint {
     margin-top: .6em;
 }
 
-#search {
-    margin-top: 10px;
-    margin-top: 1.6em;
-    margin-bottom: 1.8em;
-    float: right;
-}
 
 ul.navbar-one li
 {
@@ -190,7 +187,18 @@ ul.navbar-one li
   margin-right: 20px;
 }
 
-#nav{ float: right; }
+#nav{ float: right;
+    display: block; }
+
+#breadcrumbs a{
+    float: left;
+	margin-top: 0px;
+    display: block;
+	margin-bottom: 0;	
+    text-decoration: none;
+    font-weight: 100;
+    font-size: .5em;
+}
 
 .button{ margin-left: .6em;}
 
@@ -278,6 +286,9 @@ h2 a:hover { font-weight: 400; color: #3c94bc;}
   font-size: 1.0em;
 
 }
+
+
+
 
 /* STYLE/ACCENTS */
 #bleeder {

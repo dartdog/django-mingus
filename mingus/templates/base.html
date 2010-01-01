@@ -50,20 +50,25 @@
     {% block body %}
 
   <div id="header" class="clearfix">
-    <div id="logo">
-      <h1><img class="logo" src="{{ STATIC_URL }}imgs/oswco4logo.png" alt="Open SoftWare Company"><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
+    <div id="head1" class="clearfix">
+	<div id="logo">
+      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}"><img src="{{ STATIC_URL }}imgs/oswco4logo.png" alt="Open SoftWare Company"></a><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
       <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
     </div>
     <!-- /logo -->
-
+	
     <div id="nav">
       {% cache 3600 "base.navbars" %}
       {% navbars %}
       {% endcache %}
+	
       <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
+	</div>
+	 <!-- /nav -->
     </div>
-    <!-- /nav -->
-
+	 <!-- /head1 -->
+   
+    <div id="breadcrumbs" >{% for crumb in crumbs %}<a href="{{ crumb.path }}">{{ crumb.name }}</a>{% if not forloop.last %} <a>&rsaquo;</a> {% endif %}{% endfor %}</div>	
   </div>
   <!-- /header -->
 

@@ -27,6 +27,7 @@ TEMPLATE_DIRS = (
 )
 
 MIDDLEWARE_CLASSES = (
+'debug_toolbar.middleware.DebugToolbarMiddleware',
 'django.middleware.common.CommonMiddleware',
 'django.contrib.sessions.middleware.SessionMiddleware',
 'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -35,7 +36,6 @@ MIDDLEWARE_CLASSES = (
 'sugar.middleware.debugging.UserBasedExceptionMiddleware',
 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 'djangodblog.DBLogMiddleware',
-'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -45,6 +45,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 "django.core.context_processors.media",
 "basic.blog.context_processors.blog_settings",
 "mingus.core.context_processors.site_info",
+"navbar.context_processors.crumbs",
+"navbar.context_processors.navbar",
+"navbar.context_processors.navtree",
 "navbar.context_processors.navbars",
 )
 
