@@ -56,12 +56,10 @@
       <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
     </div>
     <!-- /logo -->
-	
     <div id="nav">
-      {% cache 3600 "base.navbars" %}
-      {% navbars %}
+      {% cache 3600 "base.navtree" %}
+      {% navtree %}
       {% endcache %}
-	
       <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
 	</div>
 	 <!-- /nav -->
