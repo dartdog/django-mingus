@@ -172,108 +172,50 @@ pre.prettyprint {
 }
 
 #logo { float: left; }
-/** Inserted by Tom Brander
- * Horizontal CSS Drop-Down Menu Module
- *
- * @file		dropdown.css
- * @package		Dropdown
- * @version		0.7.1
- * @type		Transitional
- * @stacks		597-599
- * @browsers	Windows: IE6+, Opera7+, Firefox1+
- *				Mac OS: Safari2+, Firefox2+
- *
- * @link		http://www.lwis.net/
- * @copyright	2006-2008 Live Web Institute. All Rights Reserved.
- *
- */
-ul.level-one,
-ul.level-one li,
-ul.level-one ul {
- list-style: none;
- margin-right: 10px;
- padding: 0;
-}
+/* Inserted by Tom Brander for nested nav Allows for Three levels.. pattern can be extended if you want */
+ul.level-one{
+  margin-left:-10px;  /* lines up 1st item with search box*/
 
-ul.level-one {
- position: relative;
- z-index: 597;
- float: left;
-}
-
-ul.level-one li {
- float: left;
- line-height: 1.3em;
- vertical-align: middle;
- zoom: 1;
-}
-
-ul.level-one li.hover,
-ul.level-one li:hover {
- position: relative;
- z-index: 599;
- cursor: default;
-}
-
-ul.level-one ul {
- visibility: hidden;
- position: absolute;
- top: 100%;
- left: 0;
- z-index: 598;
- width: 100%;
-}
-
-ul.level-one ul li{
- float: none;
-}
-
-ul.level-one ul ul{
- top: 1px;
- left: 99%;
-}
-/* line below modified to get any hover function  suffix from ul to ul li a*/
-ul.level-one:hover ul li a{
- visibility: visible;
-}
-
-/*
-ul ul
-{
-    display:none;
-}
-*/
-/*.level-two li
-{display:none;}
-*/
-
-/*
-.level-two ul
-{
-    position: absolute;
-	list-style: none;
-	margin: 0;
-	top: 0 px;
-	display: block;
-	z-index: 500;
-}
-
-.level-one {
-    width: 320px;
-	margin-left: 0;
-	margin-top: 0;
-    float: right;
-}
-.level-one li{
-    position: relative;
-	}
-ul.level-one li
-{
-  float:left;
+  }
+ul.level-one li{
   list-style: none;
-  margin-right: 10px;
-}
-*/
+  padding-right: 5px;
+  padding-left: 5px;
+  float: left;
+  position: relative;
+  line-height: 1.3em;
+  border-style:solid;
+  border-width:1px;
+  }
+ul.level-one li:hover {
+  background:#D9D9D9;
+  }
+.level-two {
+  display: none;
+  position :absolute;
+  Left:0;
+  top: 1em;
+  }
+.level-three {
+  display: none;
+  position :absolute;
+  top: 0em;
+  }
+.level-one li:hover .level-two {
+  display: block;
+  background: #D9D9D9;
+  width: 100px;
+  margin-left: 10px;
+  }
+.level-two li:hover .level-three {
+  display: block;
+  background: #D9D9D9;
+  width: 100px;
+  padding-left: 10px;
+  margin-left: 82px;  /* this moves the 3rd level over to the right but not too far, needs enough overlap so that you can move the mouse without the third level disappearing */
+  }
+.level-three li:hover {display:block;}
+
 #nav{ float: right;
     display: block; }
 
